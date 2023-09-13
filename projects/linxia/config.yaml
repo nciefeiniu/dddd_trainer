@@ -1,0 +1,24 @@
+Model:
+    CharSet: [' ', 三, '4', '1', 减, 八, 以, '8', 七, '0', 加, 一, '7', +, x, 称, 上, 去, '2',
+        二, 六, 乘, 五, '9', 零, '=', '3', '6', 九, '5', 四, '-']
+    ImageChannel: 3
+    ImageHeight: 32
+    ImageWidth: -1
+    Word: false
+System:
+    Allow_Ext: [jpg, jpeg, png, bmp]
+    GPU: true
+    GPU_ID: 0
+    Path: .\train_images\linxia\
+    Project: linxia
+    Val: 0.1
+Train:
+    BATCH_SIZE: 128
+    CNN: {NAME: ddddocr}
+    DROPOUT: 0.3
+    LR: 0.01
+    OPTIMIZER: SGD
+    SAVE_CHECKPOINTS_STEP: 2000
+    TARGET: {Accuracy: 0.9, Cost: 0.05, Epoch: 20}
+    TEST_BATCH_SIZE: 4
+    TEST_STEP: 16
